@@ -28,8 +28,8 @@ mp_hands = mp.solutions.hands
 hands_detector = mp_hands.Hands(static_image_mode=False, max_num_hands=2, min_detection_confidence=0.5)
 
 # Load the video
-video_path = "E:/signs/NSL23/S2_NSL_Consonent_Bright_cropped/S2_GA.mov"
-output_folder = "E:/major-project/pre-images/pre-for-ga"
+video_path = "E:/signs/NSL23/S2_NSL_Consonant_Bright/S2_JHA.MOV"
+output_folder = "E:/major-project/pre-images/pre-for-jha"
 frame_skip_interval = 5
 
 # Create output folder if it doesn't exist
@@ -39,7 +39,7 @@ if not os.path.exists(output_folder):
 cap = cv2.VideoCapture(video_path)
 
 frame_count = 0
-file_counter = 72
+file_counter = 64
 
 while True:
     # Read the next frame
@@ -67,11 +67,8 @@ while True:
                 hand_image = frame[y_min:y_max, x_min:x_max]
                 output_file = os.path.join(output_folder, f"hand_{file_counter:04d}.png")
                 cv2.imwrite(output_file, hand_image)
-
                 file_counter += 1
-    
     frame_count += 1
-
 
 # Release the video capture object
 cap.release()
