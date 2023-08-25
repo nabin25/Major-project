@@ -28,8 +28,8 @@ mp_hands = mp.solutions.hands
 hands_detector = mp_hands.Hands(static_image_mode=False, max_num_hands=2, min_detection_confidence=0.5)
 
 # Load the video
-video_path = "E:/signs/NSL23/S1_NSL_Consonant_Bright_main/S1_थ.MOV"
-output_folder = "E:/major-project/pre-images/pre-for-thaa"
+video_path = "E:/signs/NSL23/S7_NSL_Consonant_Prepared/S7_NA.MOV"
+output_folder = "E:/major-project/pre-images/pre-for-naa"
 frame_skip_interval = 5
 
 # Create output folder if it doesn't exist
@@ -39,7 +39,7 @@ if not os.path.exists(output_folder):
 cap = cv2.VideoCapture(video_path)
 
 frame_count = 0
-file_counter = 20
+file_counter = 164
 
 while True:
     # Read the next frame
