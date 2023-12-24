@@ -7,7 +7,7 @@ from pytorch_model import HandSignClassifier
 
 # Load the trained model
 model = HandSignClassifier(num_classes=36)
-model.load_state_dict(torch.load('hand_sign_classifier2.pth'))
+model.load_state_dict(torch.load('hand_sign_classifier4.pth'))
 model.eval()
 
 # Define the transformation for inference
