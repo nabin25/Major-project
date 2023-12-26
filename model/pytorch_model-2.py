@@ -77,7 +77,7 @@ model = HandSignClassifier(num_classes=num_classes).to(device)
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
-
+ 
 # Lists to store losses and accuracies for plotting
 train_losses = []
 val_losses = []
