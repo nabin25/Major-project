@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Language Detection</title>
+    <link rel="shortcut icon" href="logo nepal.png">
+    <link rel="apple-touch-icon" href="logo nepal.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+</head>
+
+<body>
+    <div id="controls">
+        <div id="titleContainer">
+            <h1>Sign Language Detection for Nepali Alphabets
+            </h1>
+        </div>
+        <button id="changeMode">Switch to Vowel</button>
+        <div id="colorPickerContainer">
+            <label for="backgroundColor">Background Color:</label>
+            <input type="color" id="backgroundColor" value="#817720">
+        </div>
+    </div>
+
+    <div id="videoContainer">
+        <video id="video" autoplay playsinline></video>
+    </div>
+
+    <div id="result">
+        <h2>Output: <span id="predictedLetter">-</span></h2>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
